@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/header_blog"
+    android:id="@+id/toolbarmenu">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/menu"
+        android:padding="30dp"
+        app:srcCompat="@drawable/outline_align_justify_space_even_24" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="20dp"
+        android:textSize="24dp"
+        android:text="Pide Ahora o Nunca"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        ></TextView>
+</LinearLayout>
