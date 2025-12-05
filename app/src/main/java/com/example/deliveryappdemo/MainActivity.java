@@ -15,11 +15,19 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
-
+    ImageSlider slider;
     ImageView menu;
+
+    LinearLayout about;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +35,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         drawerLayout=findViewById(R.id.drawerlayout);
         menu=findViewById(R.id.menu);
+        slider = findViewById(R.id.slider);
+        about= findViewById(R.id.about);
+
+        ArrayList<SlideModel> listaImagenes = new ArrayList<>();
+        listaImagenes.add(new SlideModel(R.drawable.food1, "Primera Imagen", ScaleTypes.FIT));
+        listaImagenes.add(new SlideModel(R.drawable.food2, "Segunda Imagen.", ScaleTypes.FIT));
+        listaImagenes.add(new SlideModel(R.drawable.food3, "Tercera Imagen", ScaleTypes.FIT));
+        listaImagenes.add(new SlideModel(R.drawable.food4, "Cuarta Imagen", ScaleTypes.FIT));
+        listaImagenes.add(new SlideModel(R.drawable.food5, "Quinta Imagen", ScaleTypes.FIT));
+        slider.setImageList(listaImagenes);
+
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,AboutActivity.class);
+                startActivity(i);
+            }
+        });
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override

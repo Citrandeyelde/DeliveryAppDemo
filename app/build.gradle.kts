@@ -12,7 +12,7 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
-
+        //buildConfigField ("String", "MAPTILER_API_KEY", "\"${project.properties.getValue("MAPTILER_API_KEY")}\"")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -40,4 +40,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
+    implementation ("org.maplibre.gl:android-sdk:10.0.2")
+    implementation("com.github.bumptech.glide:glide:4.15.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.0")
+    implementation("com.google.android.material:material:1.2.1")
 }

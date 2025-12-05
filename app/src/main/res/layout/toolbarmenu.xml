@@ -12,16 +12,22 @@
         android:layout_height="wrap_content"
         android:id="@+id/menu"
         android:padding="30dp"
-        app:srcCompat="@drawable/outline_align_justify_space_even_24" />
-    <TextView
-        android:layout_width="0dp"
-        android:layout_marginTop="5dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="20dp"
-        android:textSize="24dp"
-        android:text="Pide Ahora o Nunca"
-        android:layout_marginStart="10dp"
-        android:textColor="@color/white"
-        ></TextView>
+        android:src="@drawable/whitebutton"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Pide Ahora o Nunca"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"></TextView>
+    </LinearLayout>
+
 </LinearLayout>
